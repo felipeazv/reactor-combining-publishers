@@ -128,42 +128,6 @@ public class CombiningPublishersTest {
     }
     
     @Test
-    public void combineLatestStreamData1() {
-//          "Combine latest stream data"
-//          given: "source composables to combine, buffer and tap"
-           
-//          when: "the sources are combined"
-            Flux<String> mergedFlux =
-                            Flux.combineLatest(evenNumbers, oddNumbers , (a , b) ->  " " + a + b);
-            List<String> res = new ArrayList<>();
-
-            mergedFlux.subscribe(
-                            it -> {
-                                    res.add(it);
-                                    System.out.println(it);
-                            }, Throwable::printStackTrace,
-                            () -> {
-                                    Collections.sort(res);
-                                    res.add("done");
-                                    System.out.println("completed!");
-                            });
-
-//            w1.onNext(1);
-//            w2.onNext(2);
-////            w3.onNext("3a");
-//            w1.onComplete();
-//            // twice for w2
-//            w2.onNext(3);
-//            w2.onComplete();
-            // 4 times for w3
-//            w3.onNext("3b");
-//            w3.onNext("3c");
-//            w3.onNext("3d");
-//            w3.onComplete();
-
-    }
-    
-    @Test
     public void combineLatestStreamData() {
 //          "Combine latest stream data"
 //          given: "source composables to combine, buffer and tap"
