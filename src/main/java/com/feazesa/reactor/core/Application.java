@@ -1,4 +1,4 @@
-package com.feazesa.reactive.core;
+package com.feazesa.reactor.core;
 
 import java.time.Duration;
 
